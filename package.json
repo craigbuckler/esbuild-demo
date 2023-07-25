@@ -1,0 +1,32 @@
+{
+  "name": "esbuild-demo",
+  "version": "1.0.0",
+  "description": "Demonstration CSS and JavaScript build system using esbuild",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "init": "npm run clean && mkdir ./build && cp ./src/html/* ./build/ && cp -r ./src/images ./build",
+    "bundle": "npm run init && node ./esbuild.config.js",
+    "build": "npm run bundle -- production",
+    "start": "npm run bundle -- development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigbuckler/esbuild-demo.git"
+  },
+  "keywords": [
+    "esbuild",
+    "bundler",
+    "build"
+  ],
+  "author": "Craig Buckler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craigbuckler/esbuild-demo/issues"
+  },
+  "homepage": "https://github.com/craigbuckler/esbuild-demo#readme",
+  "devDependencies": {
+    "esbuild": "0.18.16"
+  }
+}
